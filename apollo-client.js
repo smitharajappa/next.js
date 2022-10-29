@@ -1,9 +1,10 @@
 import { ApolloClient, InMemoryCache } from "@apollo/client";
 
 const client = new ApolloClient({
-    uri: "https://gonzalez.stepzen.net/api/idolized-hydra/__graphql",
+    uri:"http://localhost:5001/api/idolized-hydra",
+    // uri: "https://gonzalez.stepzen.net/api/idolized-hydra/__graphql",
     header: {
-        authorization: `Apikey ${process.env.NEXT_PUBLIC_STEPZEN_KEY}`
+        Authorization: `Apikey ${process.env.NEXT_PUBLIC_STEPZEN_KEY}`
     },
     cache: new InMemoryCache(),
 });
